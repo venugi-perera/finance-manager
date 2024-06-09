@@ -1,0 +1,18 @@
+<mat-card>
+  <mat-card-content>
+    <div>
+      <mat-card-title>Sales Overview</mat-card-title>
+      <mat-form-field appearance="outline">
+        <mat-label>Month</mat-label>
+        <mat-select>
+          <mat-option *ngFor="let month of ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep']"
+            [value]="month">
+            {{ month }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+    <apx-chart [series]="salesOverviewChart.series" [chart]="salesOverviewChart.chart"
+      [xaxis]="salesOverviewChart.xaxis"></apx-chart>
+  </mat-card-content>
+</mat-card>
